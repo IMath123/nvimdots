@@ -8,6 +8,10 @@ editor["machakann/vim-sandwich"] = {
 	lazy = false,
 }
 
+editor["scrooloose/nerdcommenter"] = {
+	lazy = false,
+}
+
 editor["rainbowhxch/accelerated-jk.nvim"] = {
 	lazy = true,
 	event = "VeryLazy",
