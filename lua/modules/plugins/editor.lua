@@ -4,7 +4,11 @@ editor["pocco81/auto-save.nvim"] = {
 	lazy = false,
 }
 
-editor["chun-yang/auto-pairs"] = {
+editor["machakann/vim-sandwich"] = {
+	lazy = false,
+}
+
+editor["scrooloose/nerdcommenter"] = {
 	lazy = false,
 }
 
