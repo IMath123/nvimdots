@@ -8,7 +8,7 @@ local core_map = {
 	-- Suckless
 	["n|<S-Tab>"] = map_cr("normal za"):with_noremap():with_silent():with_desc("edit: Toggle code fold"),
 	["n|<A-w>"] = map_cu("write"):with_noremap():with_silent():with_desc("edit: Save file"),
-	["n|<A-e>"] = map_cmd(":x<CR>"):with_noremap():with_silent():with_desc("edit: Save file and quit"),
+	-- ["n|<A-e>"] = map_cmd(":x<CR>"):with_noremap():with_silent():with_desc("edit: Save file and quit"),
 	["n|<A-z>"] = map_cmd("^"):with_noremap():with_silent():with_desc("edit: go to head of current line"),
 	["n|<A-m>"] = map_cmd("$"):with_noremap():with_silent():with_desc("edit: go to end of current line"),
 	["n|q"] = map_cmd("%"):with_noremap():with_silent():with_desc("edit: %"),

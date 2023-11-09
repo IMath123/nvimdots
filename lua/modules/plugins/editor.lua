@@ -1,5 +1,13 @@
 local editor = {}
 
+editor["pocco81/auto-save.nvim"] = {
+	lazy = false,
+}
+
+editor["chun-yang/auto-pairs"] = {
+	lazy = false,
+}
+
 editor["rainbowhxch/accelerated-jk.nvim"] = {
 	lazy = true,
 	event = "VeryLazy",
