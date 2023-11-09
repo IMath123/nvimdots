@@ -11,8 +11,11 @@ local core_map = {
 	-- ["n|<A-e>"] = map_cmd(":x<CR>"):with_noremap():with_silent():with_desc("edit: Save file and quit"),
 	["n|<A-z>"] = map_cmd("^"):with_noremap():with_silent():with_desc("edit: go to head of current line"),
 	["n|<A-m>"] = map_cmd("$"):with_noremap():with_silent():with_desc("edit: go to end of current line"),
+	["v|<A-z>"] = map_cmd("^"):with_noremap():with_silent():with_desc("edit: go to head of current line"),
+	["v|<A-m>"] = map_cmd("$"):with_noremap():with_silent():with_desc("edit: go to end of current line"),
 	["n|q"] = map_cmd("%"):with_noremap():with_silent():with_desc("edit: %"),
 
+    
 	["n|Y"] = map_cmd("y$"):with_desc("edit: Yank text to EOL"),
 	["n|D"] = map_cmd("d$"):with_desc("edit: Delete text to EOL"),
 	["n|n"] = map_cmd("nzzzv"):with_noremap():with_desc("edit: Next search result"),
@@ -33,6 +36,15 @@ local core_map = {
 	["t|<A-l>"] = map_cmd("<Cmd>wincmd l<CR>"):with_silent():with_noremap():with_desc("window: Focus right"),
 	["t|<A-j>"] = map_cmd("<Cmd>wincmd j<CR>"):with_silent():with_noremap():with_desc("window: Focus down"),
 	["t|<A-k>"] = map_cmd("<Cmd>wincmd k<CR>"):with_silent():with_noremap():with_desc("window: Focus up"),
+
+	["t|<C-u>"] = map_cmd("<C-\\><C-n><C-u>"):with_silent():with_noremap():with_desc("window: Focus up"),
+	["t|<A-n>"] = map_cmd("<C-\\><C-n>"):with_silent():with_noremap():with_desc("window: Focus up"),
+    ["t|<A-p>"] = map_cmd("<C-\\><C-n>pa"):with_noremap():with_silent():with_desc("edit: %"),
+    ["n|<C-p>"] = map_cmd("a<C-p>"):with_noremap():with_silent():with_desc("edit: %"),
+    ["n|<A-p>"] = map_cmd("pa"):with_noremap():with_silent():with_desc("edit: %"),
+    ["t|<M-q>"] = map_cmd("<cmd>confirm q<cr>"):with_noremap():with_silent():with_desc("edit: %"),
+
+    
 	["n|<A-[>"] = map_cr("vertical resize -5"):with_silent():with_desc("window: Resize -5 vertically"),
 	["n|<A-]>"] = map_cr("vertical resize +5"):with_silent():with_desc("window: Resize +5 vertically"),
 	["n|<A-;>"] = map_cr("resize -2"):with_silent():with_desc("window: Resize -2 horizontally"),
@@ -72,6 +84,7 @@ local core_map = {
 	["v|K"] = map_cmd(":m '<-2<CR>gv=gv"):with_desc("edit: Move this line up"),
 	["v|<"] = map_cmd("<gv"):with_desc("edit: Decrease indent"),
 	["v|>"] = map_cmd(">gv"):with_desc("edit: Increase indent"),
+	["v|q"] = map_cmd("%"):with_desc("edit: % in v mode"),
 }
 
 bind.nvim_load_mapping(core_map)
