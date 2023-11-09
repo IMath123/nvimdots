@@ -1,5 +1,9 @@
 local tool = {}
 
+tool["junegunn/vim-easy-align"] = {
+	lazy = false,
+}
+
 tool["tpope/vim-fugitive"] = {
 	lazy = true,
 	cmd = { "Git", "G" },
