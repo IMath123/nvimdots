@@ -7,7 +7,12 @@ local map_callback = bind.map_callback
 local core_map = {
 	-- Suckless
 	["n|<S-Tab>"] = map_cr("normal za"):with_noremap():with_silent():with_desc("edit: Toggle code fold"),
-	["n|<C-s>"] = map_cu("write"):with_noremap():with_silent():with_desc("edit: Save file"),
+	["n|<A-w>"] = map_cu("write"):with_noremap():with_silent():with_desc("edit: Save file"),
+	["n|<A-e>"] = map_cmd(":x<CR>"):with_noremap():with_silent():with_desc("edit: Save file and quit"),
+	["n|<A-z>"] = map_cmd("^"):with_noremap():with_silent():with_desc("edit: go to head of current line"),
+	["n|<A-m>"] = map_cmd("$"):with_noremap():with_silent():with_desc("edit: go to end of current line"),
+	["n|q"] = map_cmd("%"):with_noremap():with_silent():with_desc("edit: %"),
+
 	["n|Y"] = map_cmd("y$"):with_desc("edit: Yank text to EOL"),
 	["n|D"] = map_cmd("d$"):with_desc("edit: Delete text to EOL"),
 	["n|n"] = map_cmd("nzzzv"):with_noremap():with_desc("edit: Next search result"),
@@ -19,14 +24,15 @@ local core_map = {
 		:with_noremap()
 		:with_silent()
 		:with_desc("edit: Clear search highlight"),
-	["n|<C-h>"] = map_cmd("<C-w>h"):with_noremap():with_desc("window: Focus left"),
-	["n|<C-l>"] = map_cmd("<C-w>l"):with_noremap():with_desc("window: Focus right"),
-	["n|<C-j>"] = map_cmd("<C-w>j"):with_noremap():with_desc("window: Focus down"),
-	["n|<C-k>"] = map_cmd("<C-w>k"):with_noremap():with_desc("window: Focus up"),
-	["t|<C-w>h"] = map_cmd("<Cmd>wincmd h<CR>"):with_silent():with_noremap():with_desc("window: Focus left"),
-	["t|<C-w>l"] = map_cmd("<Cmd>wincmd l<CR>"):with_silent():with_noremap():with_desc("window: Focus right"),
-	["t|<C-w>j"] = map_cmd("<Cmd>wincmd j<CR>"):with_silent():with_noremap():with_desc("window: Focus down"),
-	["t|<C-w>k"] = map_cmd("<Cmd>wincmd k<CR>"):with_silent():with_noremap():with_desc("window: Focus up"),
+	["n|<A-h>"] = map_cmd("<C-w>h"):with_noremap():with_desc("window: Focus left"),
+	["n|<A-l>"] = map_cmd("<C-w>l"):with_noremap():with_desc("window: Focus right"),
+	["n|<A-j>"] = map_cmd("<C-w>j"):with_noremap():with_desc("window: Focus down"),
+	["n|<A-k>"] = map_cmd("<C-w>k"):with_noremap():with_desc("window: Focus up"),
+
+	["t|<A-h>"] = map_cmd("<Cmd>wincmd h<CR>"):with_silent():with_noremap():with_desc("window: Focus left"),
+	["t|<A-l>"] = map_cmd("<Cmd>wincmd l<CR>"):with_silent():with_noremap():with_desc("window: Focus right"),
+	["t|<A-j>"] = map_cmd("<Cmd>wincmd j<CR>"):with_silent():with_noremap():with_desc("window: Focus down"),
+	["t|<A-k>"] = map_cmd("<Cmd>wincmd k<CR>"):with_silent():with_noremap():with_desc("window: Focus up"),
 	["n|<A-[>"] = map_cr("vertical resize -5"):with_silent():with_desc("window: Resize -5 vertically"),
 	["n|<A-]>"] = map_cr("vertical resize +5"):with_silent():with_desc("window: Resize +5 vertically"),
 	["n|<A-;>"] = map_cr("resize -2"):with_silent():with_desc("window: Resize -2 horizontally"),
@@ -44,13 +50,20 @@ local core_map = {
 	["i|<C-a>"] = map_cmd("<ESC>^i"):with_noremap():with_desc("edit: Move cursor to line start"),
 	["i|<C-s>"] = map_cmd("<Esc>:w<CR>"):with_desc("edit: Save file"),
 	["i|<C-q>"] = map_cmd("<Esc>:wq<CR>"):with_desc("edit: Save file and quit"),
+
+	["i|<A-z>"] = map_cmd("<esc>^i"):with_silent():with_desc("edit: go to head of current line"),
+	["i|<A-m>"] = map_cmd("<esc>$a"):with_silent():with_desc("edit: go to end of current line"),
+	["i|<C-j>"] = map_cmd("<Down>"):with_silent():with_desc("edit: go down"),
+	["i|<C-k>"] = map_cmd("<Up>"):with_silent():with_desc("edit: go up"),
+	["i|<C-l>"] = map_cmd("<Right>"):with_silent():with_desc("edit: go right"),
+	["i|<C-f>"] = map_cmd("<Right>"):with_silent():with_desc("edit: go right"),
 	-- Command mode
 	["c|<C-b>"] = map_cmd("<Left>"):with_noremap():with_desc("edit: Left"),
 	["c|<C-f>"] = map_cmd("<Right>"):with_noremap():with_desc("edit: Right"),
 	["c|<C-a>"] = map_cmd("<Home>"):with_noremap():with_desc("edit: Home"),
 	["c|<C-e>"] = map_cmd("<End>"):with_noremap():with_desc("edit: End"),
 	["c|<C-d>"] = map_cmd("<Del>"):with_noremap():with_desc("edit: Delete"),
-	["c|<C-h>"] = map_cmd("<BS>"):with_noremap():with_desc("edit: Backspace"),
+	-- ["c|<C-h>"] = map_cmd("<BS>"):with_noremap():with_desc("edit: Backspace"),
 	["c|<C-t>"] = map_cmd([[<C-R>=expand("%:p:h") . "/" <CR>]])
 		:with_noremap()
 		:with_desc("edit: Complete path of current file"),
