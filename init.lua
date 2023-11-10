@@ -19,3 +19,5 @@ local plug_map = {
 }
 
 bind.nvim_load_mapping(plug_map)
+
+vim.cmd 'set mouse='
