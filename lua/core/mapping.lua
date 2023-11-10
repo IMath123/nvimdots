@@ -5,7 +5,12 @@ local map_cmd = bind.map_cmd
 local map_callback = bind.map_callback
 
 local core_map = {
+    
+	["n||"] = map_cmd("<cmd>vsplit<cr>"):with_noremap():with_silent():with_desc("edit: Toggle code fold"),
+	["n|\\"] = map_cmd("<cmd>split<cr>"):with_noremap():with_silent():with_desc("edit: Save file"),
+    
 	-- Suckless
+    
 	["n|<S-Tab>"] = map_cr("normal za"):with_noremap():with_silent():with_desc("edit: Toggle code fold"),
 	["n|<A-w>"] = map_cu("write"):with_noremap():with_silent():with_desc("edit: Save file"),
 	-- ["n|<A-e>"] = map_cmd(":x<CR>"):with_noremap():with_silent():with_desc("edit: Save file and quit"),

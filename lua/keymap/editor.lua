@@ -22,6 +22,7 @@ local plug_map = {
 	-- Plugin: nvim-bufdel
 	["n|C"] = map_cr("BufDel"):with_noremap():with_silent():with_desc("buffer: Close current"),
 	["n|<A-q>"] = map_cmd(":x<CR>"):with_noremap():with_silent():with_desc("buffer: Close current"),
+	["n|<S-q>"] = map_cmd("<cmd>confirm q<cr>"):with_noremap():with_silent():with_desc("window: Close current window"),
 
 	-- Plugin: comment.nvim
 	["n|gcc"] = map_callback(function()
