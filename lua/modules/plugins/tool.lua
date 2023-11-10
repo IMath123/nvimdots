@@ -1,5 +1,9 @@
 local tool = {}
 
+tool["Shatur/neovim-cmake"] = {
+    lazy = false,
+}
+
 tool["junegunn/vim-easy-align"] = {
 	lazy = false,
 }
