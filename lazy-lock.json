@@ -33,6 +33,7 @@
   "hop.nvim": { "branch": "master", "commit": "ccf8e08dcc08126b1b12b32c5c76e42f6008ed56" },
   "indent-blankline.nvim": { "branch": "master", "commit": "29be0919b91fb59eca9e90690d76014233392bef" },
   "lazy.nvim": { "branch": "main", "commit": "96584866b9c5e998cbae300594d0ccfd0c464627" },
+  "leap.nvim": { "branch": "main", "commit": "e27bc4fd2e8c8282f91359ec0bbc3c686573d245" },
   "lsp-format-modifications.nvim": { "branch": "main", "commit": "006d4cd88f4f09fdc4375fcb75dd5b7d981a723b" },
   "lsp_signature.nvim": { "branch": "master", "commit": "733d95e7a76eebfb464143b0adadf139002304a4" },
   "lspsaga.nvim": { "branch": "main", "commit": "8b027966d1d5845831107a2505999d380cb18669" },

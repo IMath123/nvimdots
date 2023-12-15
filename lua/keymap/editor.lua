@@ -5,6 +5,11 @@ local map_cmd = bind.map_cmd
 local map_callback = bind.map_callback
 local et = bind.escape_termcode
 
+vim.keymap.set("n", "<leader>s", function ()
+  local current_window = vim.fn.win_getid()
+  require('leap').leap { target_windows = { current_window } }
+end)
+
 local plug_map = {
 	-- Plugin: accelerate-jk
 	--["n|j"] = map_callback(function()
@@ -13,6 +18,7 @@ local plug_map = {
 	--["n|k"] = map_callback(function()
 		--return et("<Plug>(accelerated_jk_gk)")
 	--end):with_expr(),
+    --["n|<leader>s"] = map_cmd("<Plug>(leap-forward)"):with_noremap():with_silent():with_desc("leap"),
 
 	-- Plugin persisted.nvim
 	["n|<leader>ss"] = map_cu("SessionSave"):with_noremap():with_silent():with_desc("session: Save"),

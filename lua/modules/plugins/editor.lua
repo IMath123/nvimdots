@@ -1,5 +1,12 @@
 local editor = {}
 
+editor["ggandor/leap.nvim"] = {
+    lazy = true,
+    mappings = {
+        jump_forward = "<leader>s",
+    },
+}
+
 editor["pocco81/auto-save.nvim"] = {
 	lazy = false,
 }
