@@ -3,8 +3,14 @@ return function()
 	require("completion.mason").setup()
 	require("completion.mason-lspconfig").setup()
 
+    local capabilities = vim.lsp.protocol.make_client_capabilities()
+    capabilities.textDocument.publishDiagnostics = {
+        -- Set the error limit to 100
+        -- Adjust this value according to your needs
+        errorLimit = 1000
+    }
 	local opts = {
-		capabilities = require("cmp_nvim_lsp").default_capabilities(vim.lsp.protocol.make_client_capabilities()),
+		capabilities = require("cmp_nvim_lsp").default_capabilities(capabilities),
 	}
 	-- Setup lsps that are not supported by `mason.nvim` but supported by `nvim-lspconfig` here.
 	if vim.fn.executable("dart") == 1 then

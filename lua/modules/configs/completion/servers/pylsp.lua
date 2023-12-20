@@ -7,7 +7,7 @@ return {
 			plugins = {
 				-- Lint
 				ruff = {
-					enabled = true,
+					enabled = false,
 					select = {
 						-- enable pycodestyle
 						"E",
