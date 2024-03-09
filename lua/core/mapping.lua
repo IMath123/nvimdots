@@ -17,7 +17,7 @@ local core_map = {
 	["n|<A-z>"] = map_cmd("^"):with_noremap():with_silent():with_desc("edit: go to head of current line"),
 	["n|<A-m>"] = map_cmd("$"):with_noremap():with_silent():with_desc("edit: go to end of current line"),
 	["v|<A-z>"] = map_cmd("^"):with_noremap():with_silent():with_desc("edit: go to head of current line"),
-	["v|<A-m>"] = map_cmd("$"):with_noremap():with_silent():with_desc("edit: go to end of current line"),
+	["v|<A-m>"] = map_cmd("$h"):with_noremap():with_silent():with_desc("edit: go to end of current line"),
 	["n|q"] = map_cmd("%"):with_noremap():with_silent():with_desc("edit: %"),
 
     

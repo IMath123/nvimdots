@@ -3,7 +3,7 @@ local editor = {}
 editor["ggandor/leap.nvim"] = {
     lazy = true,
     mappings = {
-        jump_forward = "<leader>s",
+        jump_forward = "f",
     },
 }
 
@@ -44,63 +44,63 @@ editor["m4xshen/autoclose.nvim"] = {
 	config = require("editor.autoclose"),
 }
 editor["max397574/better-escape.nvim"] = {
-	lazy = true,
-	event = { "CursorHold", "CursorHoldI" },
-	config = require("editor.better-escape"),
+    lazy = true,
+    event = { "CursorHold", "CursorHoldI" },
+    config = require("editor.better-escape"),
 }
 editor["LunarVim/bigfile.nvim"] = {
-	lazy = false,
-	config = require("editor.bigfile"),
-	cond = require("core.settings").load_big_files_faster,
+    lazy = false,
+    config = require("editor.bigfile"),
+    cond = require("core.settings").load_big_files_faster,
 }
 editor["ojroques/nvim-bufdel"] = {
-	lazy = true,
-	cmd = { "BufDel", "BufDelAll", "BufDelOthers" },
+    lazy = true,
+    cmd = { "BufDel", "BufDelAll", "BufDelOthers" },
 }
--- NOTE: `flash.nvim` is a powerful plugin that can be used as partial or complete replacements for:
---  > `hop.nvim`,
---  > `wilder.nvim`
---  > `nvim-treehopper`
--- Considering its steep learning curve as well as backward compatibility issues...
---  > We have no plan to remove the above plugins for the time being.
--- But as usual, you can always tweak the plugin to your liking.
-editor["folke/flash.nvim"] = {
-	lazy = true,
-	event = { "CursorHold", "CursorHoldI" },
-	config = require("editor.flash"),
-}
+---- NOTE: `flash.nvim` is a powerful plugin that can be used as partial or complete replacements for:
+----  > `hop.nvim`,
+----  > `wilder.nvim`
+----  > `nvim-treehopper`
+---- Considering its steep learning curve as well as backward compatibility issues...
+----  > We have no plan to remove the above plugins for the time being.
+---- But as usual, you can always tweak the plugin to your liking.
+--editor["folke/flash.nvim"] = {
+    --lazy = true,
+    --event = { "CursorHold", "CursorHoldI" },
+    --config = require("editor.flash"),
+--}
 editor["numToStr/Comment.nvim"] = {
-	lazy = true,
-	event = { "CursorHold", "CursorHoldI" },
-	config = require("editor.comment"),
+    lazy = true,
+    event = { "CursorHold", "CursorHoldI" },
+    config = require("editor.comment"),
 }
 editor["sindrets/diffview.nvim"] = {
-	lazy = true,
-	cmd = { "DiffviewOpen", "DiffviewClose" },
+    lazy = true,
+    cmd = { "DiffviewOpen", "DiffviewClose" },
 }
 editor["junegunn/vim-easy-align"] = {
-	lazy = true,
-	cmd = "EasyAlign",
+    lazy = true,
+    cmd = "EasyAlign",
 }
 editor["smoka7/hop.nvim"] = {
-	lazy = true,
-	version = "*",
-	event = { "CursorHold", "CursorHoldI" },
-	config = require("editor.hop"),
+    lazy = true,
+    version = "*",
+    event = { "CursorHold", "CursorHoldI" },
+    config = require("editor.hop"),
 }
 editor["RRethy/vim-illuminate"] = {
-	lazy = true,
-	event = { "CursorHold", "CursorHoldI" },
-	config = require("editor.vim-illuminate"),
+    lazy = true,
+    event = { "CursorHold", "CursorHoldI" },
+    config = require("editor.vim-illuminate"),
 }
 editor["romainl/vim-cool"] = {
-	lazy = true,
-	event = { "CursorMoved", "InsertEnter" },
+    lazy = true,
+    event = { "CursorMoved", "InsertEnter" },
 }
 editor["lambdalisue/suda.vim"] = {
-	lazy = true,
-	cmd = { "SudaRead", "SudaWrite" },
-	config = require("editor.suda"),
+    lazy = true,
+    cmd = { "SudaRead", "SudaWrite" },
+    config = require("editor.suda"),
 }
 
 ----------------------------------------------------------------------

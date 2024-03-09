@@ -5,7 +5,7 @@ local map_cmd = bind.map_cmd
 local map_callback = bind.map_callback
 local et = bind.escape_termcode
 
-vim.keymap.set("n", "<leader>s", function ()
+vim.keymap.set("n", "f", function ()
   local current_window = vim.fn.win_getid()
   require('leap').leap { target_windows = { current_window } }
 end)
@@ -21,9 +21,9 @@ local plug_map = {
     --["n|<leader>s"] = map_cmd("<Plug>(leap-forward)"):with_noremap():with_silent():with_desc("leap"),
 
 	-- Plugin persisted.nvim
-	["n|<leader>ss"] = map_cu("SessionSave"):with_noremap():with_silent():with_desc("session: Save"),
-	["n|<leader>sl"] = map_cu("SessionLoad"):with_noremap():with_silent():with_desc("session: Load current"),
-	["n|<leader>sd"] = map_cu("SessionDelete"):with_noremap():with_silent():with_desc("session: Delete"),
+    ["n|<leader>ss"] = map_cu("SessionSave"):with_noremap():with_silent():with_desc("session: Save"),
+    ["n|<leader>sl"] = map_cu("SessionLoad"):with_noremap():with_silent():with_desc("session: Load current"),
+    ["n|<leader>sd"] = map_cu("SessionDelete"):with_noremap():with_silent():with_desc("session: Delete"),
 
 	-- Plugin: nvim-bufdel
 	["n|C"] = map_cr("BufDel"):with_noremap():with_silent():with_desc("buffer: Close current"),

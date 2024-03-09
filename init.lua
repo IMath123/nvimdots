@@ -17,6 +17,9 @@ local plug_map = {
 	["n|<leader>cg"] = map_cr("CMake configure"):with_noremap():with_silent():with_desc("cmake: configure"),
 	["n|<leader>ct"] = map_cr("CMake select_target"):with_noremap():with_silent():with_desc("cmake: select_target"),
 	["n|<leader>cc"] = map_cr("CMake cancel"):with_noremap():with_silent():with_desc("cmake: cancel"),
+    -- Plugin 固定函数定义在上方
+	["n|<M-t>"] = map_cr("TSContextToggle"):with_noremap():with_silent():with_desc("TSContext: toggle"),
+    -- 
 }
 local Path = require('plenary.path')
 require('cmake').setup({
