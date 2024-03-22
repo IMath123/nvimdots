@@ -43,11 +43,11 @@ ui["zbirenbaum/neodim"] = {
 	event = "LspAttach",
 	config = require("ui.neodim"),
 }
-ui["karb94/neoscroll.nvim"] = {
-	lazy = true,
-	event = { "CursorHold", "CursorHoldI" },
-	config = require("ui.neoscroll"),
-}
+--ui["karb94/neoscroll.nvim"] = {
+	--lazy = true,
+	--event = { "CursorHold", "CursorHoldI" },
+	--config = require("ui.neoscroll"),
+--}
 ui["rcarriga/nvim-notify"] = {
 	lazy = true,
 	event = "VeryLazy",
